@@ -9,15 +9,17 @@ html {
     font-family: "Roboto", sans-serif;
     font-size: 16px;
     color: #637588;
+    letter-spacing: 0.1em;
 }
 
 h1 {
     font-family: "Roboto Slab", serif;
-    font-size: 60px;
-    letter-spacing: 5px;
+    font-size: 3.75rem;
+    letter-spacing: 0.078em;
     color: #ffff;
     font-weight: 300;
     text-align: center;
+    line-height: 1.2em;
     
 } 
 
@@ -30,9 +32,29 @@ h2 {
     line-height: 1.2em;
 } 
 
+a {
+    color: #ffff;
+    text-decoration: none;
+}
+
 .btn {
-    display: block;
-    color: red;
+    width: 250px;
+    height: 60px;
+    background-color: rgb (255, 255, 255, 0.1);
+    border: 2px solid #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.125rem;
+    letter-spacing: 0.1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    transition: background-color 0.5s;
+}
+
+.btn:hover {
+    background-color: #d66926;
+    
 }
 
 .header {
@@ -82,6 +104,60 @@ h2 {
     left: 0;
     right: 0;
     z-index: 2;
-    background-color: red;
+    /* background-color: red; */
 
+}
+
+.header-menu__container {
+    display: grid;
+    align-items: center;
+     grid-template-columns: auto 1fr;
+     gap: 20px;
+}
+
+.header-logo {
+    font-size: 1.5rem;  
+    letter-spacing: 0.25em;
+}
+
+.header-logo__link {
+    display: block;
+    padding: 20px;
+  
+}
+
+.header-logo__accent {
+    display: inline block;
+    border: 3px solid #d53d27;
+    padding: 17px 6px;
+}
+
+.header-navbar {
+
+}
+
+.header-navbar__btn {
+    display: none;
+}
+
+.header-navbar__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(2em, max-content));
+    justify-content: flex-end;
+}
+
+.header-navbar__link {
+    padding: 20px 10px;
+    display: block;
+    transition: color 0.5s;
+    font-size: 1.125rem;
+    letter-spacing: 0.1em;
+}
+
+.header-navbar__link:hover {
+    color: #d66926;
 }

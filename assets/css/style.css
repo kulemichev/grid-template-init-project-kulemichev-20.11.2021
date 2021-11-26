@@ -40,7 +40,7 @@ a {
 .btn {
     width: 250px;
     height: 60px;
-    background-color: rgb (255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border: 2px solid #ffff;
     display: flex;
     justify-content: center;
@@ -57,15 +57,18 @@ a {
 
 .btn--light {
     width: 250px;
-    background-color: rgb (255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     
 }
 
 .btn--primary {
+    position: relative;
     width: 350px;
-    background-color: (45, 54, 81, 0.8);
+    background-color: rgba(45, 54, 81, 0.8);
     font-size: 1.125rem;
-    
+    margin-top: 20px;
+    margin-left: auto; 
+    margin-right: auto; 
 }
 
 .header {
@@ -138,7 +141,7 @@ a {
 }
 
 .header-logo__accent {
-    display: inline block;
+    display: inline-block;
     border: 3px solid #d53d27;
     padding: 14px 1px 13px 5px;
     margin-right: 4px;
@@ -180,7 +183,7 @@ a {
 .skills__container {
     display: grid;
     grid-template-areas: "a1 a1 a2 a3" "a4 a5 a5 a6" "a7 a8 a9 a6";
-    grid-template-columns: 4 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 10px;
 
 }
@@ -194,6 +197,8 @@ a {
 
 .skill-item {
     position: relative;
+    display: flex;
+    justify-content: center;
     background-color: #2d3651;
     min-height: calc(33.3333vh - 13.3333px);
     overflow: hidden;
@@ -274,7 +279,11 @@ a {
    transition: color 0.5s;
 }
 
-@media (min-wdth: 991px) {
+.skill-item__link:hover {
+    color: #d66926;
+    }
+
+@media (min-width: 991px) {
     .btn--light {
         font-size: 1.125rem;
     }   
@@ -300,4 +309,6 @@ a {
         height: 40px;
     }
 }
+
+
 

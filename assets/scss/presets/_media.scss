@@ -1,0 +1,26 @@
+@media (min-width: 991px) {
+  .btn--light {
+    font-size: 1.125rem;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .btn--light {
+    width: 200px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.875rem;
+  }
+  .btn--light {
+    width: 170px;
+    height: 40px;
+  }
+}

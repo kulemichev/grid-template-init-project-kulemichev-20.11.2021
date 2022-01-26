@@ -1,0 +1,102 @@
+.skill-item {
+  position: relative;
+
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+
+  min-height: calc(33.3333vh - 13.3333px);
+
+  background-color: $color-primary;
+
+
+
+  &:hover .skill-item__image {
+    transform: scale(1.1);
+  }
+
+  &:hover .skill-item__overlay {
+    opacity: 0.95;
+  }
+}
+
+.skill-item__overlay {
+  position: absolute;
+
+  transition: opacity 0.5s;
+
+  opacity: 0.8;
+  background-color: $color-primary;
+
+  inset: 0;
+
+  &__image {
+    position: absolute;
+
+    transition: transform 0.5s;
+
+    background-position: 50% 50%;
+    background-size: cover;
+
+    inset: 0;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    letter-spacing: 0.1em;
+
+    font-size: 1.25rem;
+
+    inset: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+    padding: $gap;
+
+    transition: color 0.5s;
+  }
+
+  .skill-item__link:hover {
+    // у учителя нет этого блока
+    color: $color-accent;
+  }
+}
+
+// TODO переписать через циклы
+.skill-item:nth-of-type(1) {
+  grid-area: a1;
+}
+.skill-item:nth-of-type(2) {
+  grid-area: a2;
+}
+.skill-item:nth-of-type(3) {
+  grid-area: a3;
+}
+.skill-item:nth-of-type(4) {
+  grid-area: a4;
+}
+.skill-item:nth-of-type(5) {
+  grid-area: a5;
+}
+.skill-item:nth-of-type(6) {
+  grid-area: a6;
+}
+.skill-item:nth-of-type(7) {
+  grid-area: a7;
+}
+.skill-item:nth-of-type(8) {
+  grid-area: a8;
+}
+.skill-item:nth-of-type(9) {
+  grid-area: a9;
+}

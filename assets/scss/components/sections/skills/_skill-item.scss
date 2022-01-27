@@ -1,3 +1,6 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
 .skill-item {
   position: relative;
 
@@ -8,8 +11,6 @@
   min-height: calc(33.3333vh - 13.3333px);
 
   background-color: $color-primary;
-
-
 
   &:hover .skill-item__image {
     transform: scale(1.1);

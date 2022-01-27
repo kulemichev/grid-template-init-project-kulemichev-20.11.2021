@@ -1,6 +1,13 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
 .header-content {
   position: relative;
   z-index: 1;
+
+  &__container {
+    @extend %container;
+  }
 
   &__title {
     margin: 0 0 65px;
@@ -12,13 +19,4 @@
 
     gap: $gap;
   }
-}
-
-// TODO переписать правило
-.header-content__container,
-.header-menu__container {
-  max-width: $ul;
-  margin: 0 auto;
-  padding-right: $gap;
-  padding-left: $gap;
 }

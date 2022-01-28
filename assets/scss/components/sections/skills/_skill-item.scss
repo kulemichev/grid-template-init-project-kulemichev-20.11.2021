@@ -4,13 +4,16 @@
 .skill-item {
   position: relative;
 
-  display: flex;
-  overflow: hidden;
-  justify-content: center;
-
   min-height: calc(33.3333vh - 13.3333px);
 
   background-color: $color-primary;
+  overflow: hidden;
+  // display: flex;
+  // justify-content: center;
+
+  &:hover .skill-item__link {
+    color: $color-accent;
+  }
 
   &:hover .skill-item__image {
     transform: scale(1.1);
@@ -66,38 +69,10 @@
 
     transition: color 0.5s;
   }
+}
 
-  .skill-item__link:hover {
-    // у учителя нет этого блока
-    color: $color-accent;
+@for $i from 1 through 9 {
+  .skill-item:nth-of-type(#{$i}) {
+    grid-area: a#{$i};
   }
-}
-
-// TODO переписать через циклы
-.skill-item:nth-of-type(1) {
-  grid-area: a1;
-}
-.skill-item:nth-of-type(2) {
-  grid-area: a2;
-}
-.skill-item:nth-of-type(3) {
-  grid-area: a3;
-}
-.skill-item:nth-of-type(4) {
-  grid-area: a4;
-}
-.skill-item:nth-of-type(5) {
-  grid-area: a5;
-}
-.skill-item:nth-of-type(6) {
-  grid-area: a6;
-}
-.skill-item:nth-of-type(7) {
-  grid-area: a7;
-}
-.skill-item:nth-of-type(8) {
-  grid-area: a8;
-}
-.skill-item:nth-of-type(9) {
-  grid-area: a9;
 }

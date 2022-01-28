@@ -4,12 +4,9 @@
 .skill-item {
   position: relative;
 
-  min-height: calc(33.3333vh - 13.3333px);
+  overflow: hidden;
 
   background-color: $color-primary;
-  overflow: hidden;
-  // display: flex;
-  // justify-content: center;
 
   &:hover .skill-item__link {
     color: $color-accent;
@@ -22,40 +19,36 @@
   &:hover .skill-item__overlay {
     opacity: 0.95;
   }
-}
 
-.skill-item__overlay {
-  position: absolute;
+  &__overlay {
+    @include abs-position;
 
-  transition: opacity 0.5s;
-
-  opacity: 0.8;
-  background-color: $color-primary;
-
-  inset: 0;
+    transition: opacity 0.5s;
+    opacity: 0.8;
+    background-color: $color-primary;
+  }
 
   &__image {
-    position: absolute;
+    @include abs-position;
 
     transition: transform 0.5s;
-
     background-position: 50% 50%;
     background-size: cover;
-
-    inset: 0;
   }
 
   &__title {
-    position: relative;
+    @include abs-position;
+
     z-index: 1;
-
     margin: 0;
-
     letter-spacing: 0.1em;
 
-    font-size: 1.25rem;
-
-    inset: 0;
+    @include md-min {
+      font-size: 1.25rem;
+    }
+    @include md-min {
+      font-size: 1.125rem;
+    }
   }
 
   &__link {

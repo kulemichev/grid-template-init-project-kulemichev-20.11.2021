@@ -1,0 +1,89 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.posts__container {
+  max-width: $ul;
+  margin: auto;
+  padding-right: $gap;
+  padding-left: $gap;
+}
+.posts h2 {
+  margin-top: 0;
+}
+
+.posts__grid {
+  display: grid;
+  padding-bottom: $gap;
+  gap: $gap;
+}
+.post-item {
+  transition: background-color 0.5s;
+  background-color: #f2f2f2;
+}
+.post-item:hover {
+  background-color: #d8d8d8;
+}
+.post-item:hover .post-item__image img {
+  transform: scale(1.1);
+}
+.post-item:hover h3 {
+  color: $color-primary;
+}
+.post-item:hover p {
+  color: $color-primary;
+}
+.post-item__link {
+  display: grid;
+  overflow: hidden;
+
+  height: 100%;
+
+  grid-template-rows: 300px 1fr;
+}
+.post-item__image {
+  display: flex;
+  overflow: hidden;
+  align-content: center;
+  justify-content: center;
+  background-color: $color-primary;
+}
+.post-item__image img {
+  width: 100%;
+
+  transition: transform 0.5s;
+
+  object-fit: cover;
+}
+.post-item__caption {
+  display: grid;
+  align-content: center;
+
+  padding: $gap;
+}
+.post-item__caption h3 {
+  transition: color 0.5s;
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+.post-item__caption p {
+  transition: color 0.5s;
+  text-align: center;
+}
+.post-item:nth-of-type(1) {
+  grid-area: p1;
+}
+.post-item:nth-of-type(2) {
+  grid-area: p2;
+}
+.post-item:nth-of-type(3) {
+  grid-area: p3;
+}
+.post-item:nth-of-type(4) {
+  grid-area: p4;
+}
+.post-item:nth-of-type(5) {
+  grid-area: p5;
+}
+.post-item:nth-of-type(6) {
+  grid-area: p6;
+}

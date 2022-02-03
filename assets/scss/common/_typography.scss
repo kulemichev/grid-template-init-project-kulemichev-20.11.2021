@@ -9,11 +9,8 @@
 
 html {
   overflow-y: scroll;
-
   letter-spacing: 0.1em;
-
   color: $color-gray;
-
   font-family: $font-main;
   font-size: $font-size;
 }
@@ -43,9 +40,7 @@ h1 {
 
 h2 {
   letter-spacing: 4px;
-
   color: $color-primary;
-
   font-family: $font-header, serif;
   font-size: 40px;
   line-height: 1.2em;
@@ -53,6 +48,5 @@ h2 {
 
 a {
   text-decoration: none;
-
   color: $color-light;
 }

@@ -38,21 +38,23 @@
 }
 .about__image {
   display: grid;
-  -ms-flex-line-pack: center;
   align-content: center;
-
   justify-items: center;
 }
 .about__image img {
   max-width: 100%;
   max-height: 480px;
-  // float: right;
 }
 
 .about__container {
   gap: $gap;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 271px;
 }
 .about__content p:first-of-type::after {
   display: none;
+}
+
+.about {
+  padding-top: 100px;
+  padding-bottom: 100px;
 }

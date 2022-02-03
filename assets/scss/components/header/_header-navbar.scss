@@ -117,17 +117,17 @@
       @include unlist;
     }
 
-    // &--active {
-    //   display: block !important;
-    //   background-color: rgba($color-gray-dark, 0.9);
-    //   position: absolute;
-    //   top: 100%;
+    &--active {
+      display: block !important;
+      background-color: rgba($color-gray-dark, 0.9);
+      position: absolute;
+      top: 100%;
 
-    //   @include box-shadow;
-    // }
+      @include box-shadow;
+    }
   }
 
-  &__iten {
+  &__item {
     @include md {
       margin: $gap $gap-sm;
     }
